@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${boardTitle}">Title</title>
+    <div th:replace="fragments/headFragment :: headFragment"></div>
+    <h1 th:text="|<${boardTitle}> 게시판|"></h1>
+</head>
+<body>
+
+    <button>
+        <a th:href="@{/{boardTitle}/postRegister (boardTitle=${boardTitle})}">글쓰기</a>
+    </button>
+
+    <table>
+        <tr th:each="post:${posts}">
+            <td th:text="${post.post_number}">글번호</td>
+           <td>
+               <a th:href="@{/{boardTitle}/{postNumber} (boardTitle=${boardTitle}, postNumber=${post.post_number})}"
+                  th:text="${post.post_title}">게시글</a>
+           </td>
+        </tr>
+    </table>
+</body>
+</html>

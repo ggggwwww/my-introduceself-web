@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="navFragment">
+    <div>
+        <fieldset>
+            <legend>게시판 목록</legend>
+            <table>
+                <tr th:each="board : ${boardList}">
+                    <td>
+                        <a th:href="@{/{boardTitle} (boardTitle=${board.board_title})}" th:text="${board.board_title}">게시판</a>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+    <div th:replace="fragments/headFragment :: headFragment"></div>
+</head>
+<body>
+    <button><a th:href="@{/administratorValidate}">관리자 페이지</a></button>
+    <div th:class="taskImages">
+        <a href="https://github.com/ggggwwww" target="_blank">
+            <img th:src="@{/static/images/GitHub.png}" alt="Image">
+        </a>
+        <a href="https://www.notion.so/93ee5d38d1744c609dd3764454cf7fc3" target="_blank">
+            <img th:src="@{/static/images/Notion.png}" alt="Image">
+        </a>
+    </div>
+</body>
+<nav th:replace="fragments/navFragment :: navFragment"></nav>
+</html>

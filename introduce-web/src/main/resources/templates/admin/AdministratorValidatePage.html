@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>관리자 검증</title>
+    <div th:replace="fragments/headFragment :: headFragment"></div>
+</head>
+<body>
+    <form th:action="@{/administrator}" method="post">
+        <input type="text" placeholder="검증 패스워드 입력" name="validString">
+        <button type="submit">검증</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>createPostForm</title>
+    <div th:replace="fragments/headFragment :: headFragment"></div>
+</head>
+<body>
+    <h1>게시글 제작 폼</h1>
+
+    <form th:action="@{/{boardTitle}/postRegister (boardTitle=${boardTitle})}" method="post">
+        <span>게시글 제목</span>
+        <input type="text" name="post_title">
+        <span>게시글 내용</span>
+        <input type="text" name="post_contents">
+        <button type="submit">글 등록</button>
+    </form>
+</body>
+</html>

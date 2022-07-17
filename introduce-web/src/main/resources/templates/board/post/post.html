@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:each="post:${posts}" th:text="${post.post_title}"></title>
+    <div th:replace="fragments/headFragment :: headFragment"></div>
+</head>
+<body>
+    <table>
+        <tr th:each="post:${posts}">
+            <td th:text="|제목: ${post.post_title}|"></td>
+            <br>
+            <td th:text="|내용: ${post.post_contents}|"></td>
+        </tr>
+    </table>
+</body>
+<!--<footer>-->
+<!--    <form method="post">-->
+<!--        <fieldset>-->
+<!--            <legend>댓글</legend>-->
+<!--            <input type="text" placeholder="댓글 작성">-->
+<!--        </fieldset>-->
+<!--        <button type="submit">댓글 등록</button>-->
+<!--    </form>-->
+<!--    <table>-->
+<!--        <tr>-->
+<!--            <td>댓글 번호</td>-->
+<!--            <td>댓글 작성자</td>-->
+<!--            <td>댓글 내용</td>-->
+<!--            <td>댓글 작성 시간</td>-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--</footer>-->
+</html>

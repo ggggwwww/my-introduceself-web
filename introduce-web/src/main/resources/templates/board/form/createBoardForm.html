@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en", xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>createBoardForm</title>
+</head>
+<body>
+    <h1>게시판 생성 폼</h1>
+    <form th:action="@{/registerBoard}" method="post">
+        <span>게시판 제목</span>
+        <input type="text" name="board_title">
+        <button type="submit">게시판 등록</button>
+    </form>
+</body>
+</html>
